@@ -3,52 +3,53 @@ header{
     padding: 20px 30px;
 }
 
-.item figure{
-    /* background-color: red; */
+.content-grid-1 .item figure{
+    width: 360px;
+}
+
+.content-grid-2 .item figure{
     width: 360px;
     height: 360px;
 }
 
-.item:nth-child(6) figure{
-    /* background-color: red; */
+.content-grid-2 .item:nth-child(3) figure{
     width: 360px;
     height: 698px;
 }
 
-.content-grid{
+.content-grid-1{
+    margin-bottom: 69px;
     display: grid;
-    grid-gap: 55px;
-    grid-template-areas: "um dois tres" "quatro cinco seis" "sete oito seis";
+    grid-gap: 30px;
+    grid-template-columns:repeat(auto-fill, 380px);
 }
 
-.item:nth-child(1){
+.content-grid-2{
+    display: grid;
+    grid-gap: 55px;
+    grid-template-areas: "um dois tres" "quatro cinco tres";
+}
+
+.content-grid-2 .item:nth-child(1){
     grid-area: um;
 }
-.item:nth-child(2){
+.content-grid-2 .item:nth-child(2){
     grid-area: dois;
 }
-.item:nth-child(3){
+.content-grid-2 .item:nth-child(3){
     grid-area: tres;
 }
-.item:nth-child(4){
+.content-grid-2 .item:nth-child(4){
     grid-area: quatro;
 }
-.item:nth-child(5){
+.content-grid-2 .item:nth-child(5){
     grid-area: cinco;
-}
-.item:nth-child(6){
-    grid-area: seis;
-}
-.item:nth-child(7){
-    grid-area: sete;
-}
-.item:nth-child(8){
-    grid-area: oito;
 }
 
 section.container.content{
     display:flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 body section:nth-child(2){
@@ -62,10 +63,21 @@ footer{
 }
 
 @media only screen and (max-width: 900px) {
-    .container .content-grid{
+    .container .content-grid-2{
         display: grid;
         grid-template-areas: "um" "dois" "tres" "quatro" "cinco" "seis" "sete" "oito";
     }
+    
+body section:nth-child(3){
+    display: flex;
+    justify-content: center;
+}
+
+body section:nth-child(3) .content-grid-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 }
 
 
@@ -75,7 +87,7 @@ footer{
         width: 25vw;
     }
     
-    .item:nth-child(6) figure{
+    .item:nth-child(3) figure{
         width: 25vw;
     }   
 }
@@ -84,7 +96,7 @@ footer{
             width: 80vw;
         }
         
-        .item:nth-child(6) figure{
+        .item:nth-child(3) figure{
             width: 80vw;
         }   
     }

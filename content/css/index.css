@@ -1,0 +1,90 @@
+header{
+    background-color: var(--main-color);
+    padding: 20px 30px;
+}
+
+.item figure{
+    /* background-color: red; */
+    width: 360px;
+    height: 360px;
+}
+
+.item:nth-child(6) figure{
+    /* background-color: red; */
+    width: 360px;
+    height: 698px;
+}
+
+.content-grid{
+    display: grid;
+    grid-gap: 55px;
+    grid-template-areas: "um dois tres" "quatro cinco seis" "sete oito seis";
+}
+
+.item:nth-child(1){
+    grid-area: um;
+}
+.item:nth-child(2){
+    grid-area: dois;
+}
+.item:nth-child(3){
+    grid-area: tres;
+}
+.item:nth-child(4){
+    grid-area: quatro;
+}
+.item:nth-child(5){
+    grid-area: cinco;
+}
+.item:nth-child(6){
+    grid-area: seis;
+}
+.item:nth-child(7){
+    grid-area: sete;
+}
+.item:nth-child(8){
+    grid-area: oito;
+}
+
+section.container.content{
+    display:flex;
+    justify-content: center;
+}
+
+body section:nth-child(2){
+    margin-top: 50px;
+}
+
+footer{
+    margin-top: 20px;
+    padding: 25px 0;
+    background-color: var(--main-color);
+}
+
+@media only screen and (max-width: 900px) {
+    .container .content-grid{
+        display: grid;
+        grid-template-areas: "um" "dois" "tres" "quatro" "cinco" "seis" "sete" "oito";
+    }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .item figure{
+        width: 25vw;
+    }
+    
+    .item:nth-child(6) figure{
+        width: 25vw;
+    }   
+}
+    @media only screen and (max-width: 500px){
+        .item figure{
+            width: 80vw;
+        }
+        
+        .item:nth-child(6) figure{
+            width: 80vw;
+        }   
+    }

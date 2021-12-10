@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../font/Helvetica-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../font/helvetica-1.otf");
+}
+
+
+:root {
+  --font-familly: Helvetica, sans-serif;;
+  --main-color: #3498db;
+  --cor-black-1: #2c2c2c;
+  --cor-black-2: #000000;
+  --cor-white-1: #f1f1f1;
+  --cor-overlay-1: #818181;
+  --width-container: 1200px;
+}
+
+
+
+/* RESETS EM GERAL */
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: var(--font-familly)
+}
+
+.container{
+  max-width: var(--width-container);
+  margin: 0 auto;
+}
+
+
+:focus {
+  border: 0;
+}
+:focus-visible {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+a:hover {
+  opacity: 0.7;
+}
+* {
+  transition: 0.3s;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slick-slide img {
+  width: 100%;
+  max-width: var(--width-container);
+  margin: 0 auto;
+}
+
+ul.slick-dots {
+  position: relative;
+  top: -40px;
+}
+.slick-prev {
+  left: 55px !important;
+  z-index: 1;
+}
+.slick-next {
+  z-index: 1;
+  right: 55px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--cor-black-1);
+}
+.slick-prev,
+.slick-next {
+  color: var(--cor-black-1);;
+}
+
+.slick-prev:before, .slick-next:before{
+  font-size: 50px !important;
+}
+
+button.slick-prev.slick-arrow{
+  left: 75px !important;
+}
+
+button.slick-next.slick-arrow{
+  right: 106px !important;
+}

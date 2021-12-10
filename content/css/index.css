@@ -46,6 +46,11 @@ header{
     grid-area: cinco;
 }
 
+.align-center{
+    text-align: center;
+    margin-top: 20px;
+}
+
 section.container.content{
     display:flex;
     justify-content: center;
@@ -79,6 +84,7 @@ body section:nth-child(3) .content-grid-1{
     justify-content: center;
 }
 }
+
 
 
 
